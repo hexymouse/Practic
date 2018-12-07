@@ -1,0 +1,23 @@
+package com.company;
+public class Main {
+
+    public static void main(String[] args) {
+        Dog Bakster = new Dog();
+        Bakster.golos();
+
+        Cat Murka = new Cat();
+        Murka.golos();
+    }
+}
+
+class Dog{
+    public void golos(){
+        System.out.println("Гав!");
+    }
+}
+
+class Cat{
+    public void golos(){
+        System.out.println("Мяу!");
+    }
+}
