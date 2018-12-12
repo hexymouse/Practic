@@ -1,10 +1,11 @@
 package com.company;
 
-public class Dog {
+public class Dog  {
     String name;
     Integer age;
 
-    public Dog (String name, Integer age) {
+    Dog (String name, Integer age) {
         this.name = name;
         this.age = age;
     }
+}
