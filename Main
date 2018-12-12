@@ -1,26 +1,34 @@
 package com.company;
 
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        Dog[] dogs = new Dog[5];
+        ArrayList<Dog> dogs = new ArrayList();
+        ArrayList<Dog> listLessFive = new ArrayList();
+        ArrayList<Dog> listMoreFive = new ArrayList();
 
-        dogs[0] = new Dog("Bakster",4);
-        dogs[1] = new Dog("Archi",6);
-        dogs[2] = new Dog("Kira",3);
-        dogs[3] = new Dog("Sahan",8);
-        dogs[4] = new Dog("Pich",1);
+        dogs.add(new Dog("Bakster",4));
+        dogs.add(new Dog("Archi",6));
+        dogs.add(new Dog("Kira",3));
+        dogs.add(new Dog("Sahan",8));
+        dogs.add(new Dog("Pich",1));
 
-        System.out.println("Список собак младше 5 лет:");
-        for(int i=0; i<5; i++) {
-            if(dogs[i].age<5) {
-                System.out.println("Имя: "+dogs[i].name+", возраст: "+dogs[i].age);
+        for (int i=0; i < dogs.size(); i++) {
+            if(dogs.get(i).age < 5) {
+                listLessFive.add(dogs.get(i));
+            } else {
+                listMoreFive.add(dogs.get(i));
             }
         }
-        System.out.println("Список собак старше 5 лет:");
-        for(int i=0; i<5; i++) {
-            if(dogs[i].age>5) {
-                System.out.println("Имя: "+dogs[i].name+", возраст: "+dogs[i].age);
-            }
+
+        System.out.println("Список собак младше 5 лет: ");
+        for (int i=0; i<listLessFive.size();i++) {
+            System.out.println("Кличка: " + listLessFive.get(i).name + ", возраст: " + listLessFive.get(i).age);
+        }
+        System.out.println("\n"+"Список собак старше 5 лет: ");
+        for (int i = 0;i < listMoreFive.size(); i++) {
+            System.out.println("Кличка: " + listMoreFive.get(i).name + ", возраст: " + listMoreFive.get(i).age);
         }
     }
 }
