@@ -1,11 +1,25 @@
 package com.company;
 
 public class Dog  {
-    String name;
-    Integer age;
+    private String name;
+    private Integer age;
 
-    Dog (String name, Integer age) {
+    public String getName() {
+        return name;
+    }
+    public Integer getAge() {
+        return age;
+    }
+    public void setAge(Integer i) {
+        this.age = i;
+    }
+    public void setName(String a) {
+        this.name = a;
+    }
+
+    public Dog (String name, Integer age) {
         this.name = name;
         this.age = age;
     }
+
 }
